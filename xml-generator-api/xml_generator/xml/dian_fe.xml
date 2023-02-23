@@ -1,0 +1,210 @@
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:sts="dian:gov:co:facturaelectronica:Structures-2-1"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd">
+    <ext:UBLExtensions>
+        <ext:UBLExtension>
+            <ext:ExtensionContent />
+        </ext:UBLExtension>
+    </ext:UBLExtensions>
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>10</cbc:CustomizationID>
+    <cbc:ProfileID>DIAN 2.1: Factura Electr&#243;nica de Venta</cbc:ProfileID>
+    <cbc:ProfileExecutionID>1</cbc:ProfileExecutionID>
+    <cbc:ID>FP140608</cbc:ID>
+    <cbc:UUID schemeID="1" schemeName="CUFE-SHA384">
+        e9c437dd3f48e7f8262e3d644770160a4c6730d799b0ba59405c66d483d09b8e8bb5b060eac6f088f9628641bad4c1f8</cbc:UUID>
+    <cbc:IssueDate>2022-04-05</cbc:IssueDate>
+    <cbc:IssueTime>21:42:24-05:00</cbc:IssueTime>
+    <cbc:DueDate>2022-04-05</cbc:DueDate>
+    <cbc:InvoiceTypeCode>01</cbc:InvoiceTypeCode>
+    <cbc:DocumentCurrencyCode>COP</cbc:DocumentCurrencyCode>
+    <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+    <cac:AccountingSupplierParty>
+        <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cbc:IndustryClassificationCode>6201;6312</cbc:IndustryClassificationCode>
+            <cac:PartyName>
+                <cbc:Name>FACTURATECH</cbc:Name>
+            </cac:PartyName>
+            <cac:PhysicalLocation>
+                <cac:Address>
+                    <cbc:ID>05001</cbc:ID>
+                    <cbc:CityName>MEDELLIN</cbc:CityName>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>CR 43 A 15 SUR 15 ED XEROX OF 802</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">COLOMBIA</cbc:Name>
+                    </cac:Country>
+                </cac:Address>
+            </cac:PhysicalLocation>
+            <cac:PartyTaxScheme>
+                <cbc:RegistrationName>Ftech Colombia S.A.S</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Direcci&#243;n de Impuestos y Aduanas Nacionales)"
+                    schemeID="8" schemeName="31">901143311</cbc:CompanyID>
+                <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+                <cac:RegistrationAddress>
+                    <cbc:ID>05001</cbc:ID>
+                    <cbc:CityName>MEDELLIN</cbc:CityName>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>CR 43 A 15 SUR 15 ED XEROX OF 802</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">COLOMBIA</cbc:Name>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+                <cac:TaxScheme>
+                    <cbc:ID>1</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Ftech Colombia S.A.S</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Direcci&#243;n de Impuestos y Aduanas Nacionales)"
+                    schemeID="8" schemeName="31">901143311</cbc:CompanyID>
+                <cac:CorporateRegistrationScheme>
+                    <cbc:ID>FP</cbc:ID>
+                    <cbc:Name>2160555112</cbc:Name>
+                </cac:CorporateRegistrationScheme>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Ftech Colombia S.A.S</cbc:Name>
+                <cbc:Telephone>4531014323</cbc:Telephone>
+                <cbc:ElectronicMail>prueba@gmail.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cbc:AdditionalAccountID>1</cbc:AdditionalAccountID>
+        <cac:Party>
+            <cbc:IndustryClassificationCode>6201;6312</cbc:IndustryClassificationCode>
+            <cac:PartyName>
+                <cbc:Name>FACTURATECH</cbc:Name>
+            </cac:PartyName>
+            <cac:PhysicalLocation>
+                <cac:Address>
+                    <cbc:ID>05001</cbc:ID>
+                    <cbc:CityName>MEDELLIN</cbc:CityName>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>CR 43 A 15 SUR 15 ED XEROX OF 802</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">COLOMBIA</cbc:Name>
+                    </cac:Country>
+                </cac:Address>
+            </cac:PhysicalLocation>
+            <cac:PartyTaxScheme>
+                <cbc:RegistrationName>Ftech Colombia S.A.S</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Direcci&#243;n de Impuestos y Aduanas Nacionales)"
+                    schemeID="8" schemeName="31">901143311</cbc:CompanyID>
+                <cbc:TaxLevelCode>R-99-PN</cbc:TaxLevelCode>
+                <cac:RegistrationAddress>
+                    <cbc:ID>05001</cbc:ID>
+                    <cbc:CityName>MEDELLIN</cbc:CityName>
+                    <cbc:CountrySubentity>Antioquia</cbc:CountrySubentity>
+                    <cbc:CountrySubentityCode>05</cbc:CountrySubentityCode>
+                    <cac:AddressLine>
+                        <cbc:Line>CR 43 A 15 SUR 15 ED XEROX OF 802</cbc:Line>
+                    </cac:AddressLine>
+                    <cac:Country>
+                        <cbc:IdentificationCode>CO</cbc:IdentificationCode>
+                        <cbc:Name languageID="es">COLOMBIA</cbc:Name>
+                    </cac:Country>
+                </cac:RegistrationAddress>
+                <cac:TaxScheme>
+                    <cbc:ID>1</cbc:ID>
+                    <cbc:Name>IVA</cbc:Name>
+                </cac:TaxScheme>
+            </cac:PartyTaxScheme>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName>Ftech Colombia S.A.S</cbc:RegistrationName>
+                <cbc:CompanyID schemeAgencyID="195"
+                    schemeAgencyName="CO, DIAN (Direcci&#243;n de Impuestos y Aduanas Nacionales)"
+                    schemeID="8" schemeName="31">901143311</cbc:CompanyID>
+                <cac:CorporateRegistrationScheme>
+                    <cbc:ID>FP</cbc:ID>
+                    <cbc:Name>2160555112</cbc:Name>
+                </cac:CorporateRegistrationScheme>
+            </cac:PartyLegalEntity>
+            <cac:Contact>
+                <cbc:Name>Ftech Colombia S.A.S</cbc:Name>
+                <cbc:Telephone>4531014323</cbc:Telephone>
+                <cbc:ElectronicMail>prueba@gmail.com</cbc:ElectronicMail>
+            </cac:Contact>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID=""></cbc:TaxAmount>
+        <cbc:RoundingAmount currencyID=""></cbc:RoundingAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID=""></cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID=""></cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cbc:Percent></cbc:Percent>
+                <cac:TaxScheme>
+                    <cbc:ID></cbc:ID>
+                    <cbc:Name></cbc:Name>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID=""></cbc:LineExtensionAmount>
+        <cbc:TaxExclusiveAmount currencyID=""></cbc:TaxExclusiveAmount>
+        <cbc:TaxInclusiveAmount currencyID=""></cbc:TaxInclusiveAmount>
+        <cbc:PrepaidAmount currencyID=""></cbc:PrepaidAmount>
+        <cbc:PayableAmount currencyID=""></cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID></cbc:ID>
+        <cbc:Note></cbc:Note>
+        <cbc:InvoicedQuantity unitCode=""></cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID=""></cbc:LineExtensionAmount>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID=""></cbc:TaxAmount>
+            <cbc:RoundingAmount currencyID=""></cbc:RoundingAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID=""></cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID=""></cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent></cbc:Percent>
+                    <cac:TaxScheme>
+                        <cbc:ID></cbc:ID>
+                        <cbc:Name></cbc:Name>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description></cbc:Description>
+            <cac:StandardItemIdentification>
+                <cbc:ID schemeAgencyID="" schemeID="999"
+                    schemeName="Est&#225;ndar de adopci&#243;n del contribuyente"></cbc:ID>
+            </cac:StandardItemIdentification>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID=""></cbc:PriceAmount>
+            <cbc:BaseQuantity unitCode=""></cbc:BaseQuantity>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>

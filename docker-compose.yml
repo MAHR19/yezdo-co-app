@@ -1,0 +1,14 @@
+version: '3'
+services:
+  yezdo-co:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/yezdo-react-app
+  postgres:
+    image : 'postgres:latest'
+
+  

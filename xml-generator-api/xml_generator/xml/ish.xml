@@ -1,0 +1,36 @@
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:implocal="http://www.sat.gob.mx/implocal"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="4.0" Folio="167ABC"
+    Fecha="2022-12-29T14:39:35" SubTotal="2000.00" Sello="" NoCertificado="30001000000400002434"
+    Certificado="" Total="2400.00" Moneda="MXN" Exportacion="01" TipoDeComprobante="I"
+    LugarExpedicion="58000" CondicionesDePago="CONDICIONES" FormaPago="01" Serie="A"
+    MetodoPago="PUE"
+    xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd
+                        http://www.sat.gob.mx/implocal http://www.sat.gob.mx/sitio_internet/cfd/implocal/implocal.xsd">
+    <cfdi:Emisor Rfc="EKU9003173C9" Nombre="ESCUELA KEMPER URGATE" RegimenFiscal="601" />
+    <cfdi:Receptor Rfc="AABF800614HI0" Nombre="FELIX MANUEL ANDRADE BALLADO"
+        RegimenFiscalReceptor="616" DomicilioFiscalReceptor="86400" UsoCFDI="S01" />
+    <cfdi:Conceptos>
+        <cfdi:Concepto Cantidad="1.00" ClaveProdServ="90111503" ClaveUnidad="ROM"
+            Descripcion="HABITACION" ObjetoImp="02" Importe="2000.00" NoIdentificacion="001"
+            Unidad="ROM" ValorUnitario="2000.00">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="2000.00" Importe="320.00" Impuesto="002"
+                        TasaOCuota="0.160000" TipoFactor="Tasa" />
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos TotalImpuestosTrasladados="320.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado Base="2000.00" Importe="320.00" Impuesto="002" TasaOCuota="0.160000"
+                TipoFactor="Tasa" />
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <implocal:ImpuestosLocales version="1.0"
+            TotaldeRetenciones="0.0" TotaldeTraslados="80.00">
+            <implocal:TrasladosLocales ImpLocTrasladado="ISH" TasadeTraslado="4.00" Importe="80.00" />
+        </implocal:ImpuestosLocales>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

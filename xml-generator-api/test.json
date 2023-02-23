@@ -1,0 +1,17 @@
+{
+    "emisor": {
+        "nombre":"adsadsasd"
+
+    },
+    "receptor": {},
+    "documento": {},
+    "productos": 
+    {
+        "producto1": {
+            "impuestos": {}
+        },
+        "producto2": {
+            "impuestos": {}
+        }
+    }
+}
