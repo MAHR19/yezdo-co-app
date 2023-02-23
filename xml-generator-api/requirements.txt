@@ -1,1 +1,3 @@
 lxml
+fastapi[all]
+psycopg2

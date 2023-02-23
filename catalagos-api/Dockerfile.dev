@@ -1,0 +1,11 @@
+FROM python:3.10
+
+WORKDIR /catalagos-api
+
+COPY ./requirements.txt /catalagos-api/requirements.txt
+
+RUN pip install --no-cache-dir --upgrade -r /catalagos-api/requirements.txt
+
+COPY . /catalagos-api/
+
+CMD ["uvicorn","main:app", "--reload" ]

@@ -1,14 +1,36 @@
 version: '3'
 services:
+
+ # React App
+ 
   yezdo-co:
     build: 
-      context: .
+      context: ./yezdo-react-app
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
-      - .:/yezdo-react-app
-  postgres:
-    image : 'postgres:latest'
+      - ./yezdo-react-app:/yezdo-react-app
+  # API de catalagos
+  #postgres:
+  #  image : 'postgres:latest'
+  #catalagos-api:
+  #  build:
+  #    context: ./catalagos-api
+  #    dockerfile: Dockerfile.dev
+  #  ports:
+  #    - "80:80"
+  #  volumes:
+  #    - ./catalagos-api:/catalagos-api
+  # API que genera XML
+  xml-api:
+    build:
+      context: ./xml-generator-api
+      dockerfile: Dockerfile.dev
+    command: uvicorn main:app --reload --host 0.0.0.0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./xml-generator-api:/xml-api
 
   
