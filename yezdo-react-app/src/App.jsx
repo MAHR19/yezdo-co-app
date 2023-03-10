@@ -1,14 +1,16 @@
 import React from 'react';
-//import SignIn from './signin/SignIn';
-//import Dashboard from './dashboard/Dashboard';
-//import { Routes, Route } from 'react-router-dom';
-//import { Provider } from 'react-redux';
-//import { store } from './store/auth/store';
+import SignIn from './signin/SignIn';
+import Dashboard from './dashboard/Dashboard';
+import { Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+//import { store } from './store/store';
 
 function App() {
   return (
       <>
-      <h1>working</h1>
+      
+        <SignIn />
+    
       </>
   );
 }

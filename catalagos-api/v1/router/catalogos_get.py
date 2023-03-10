@@ -1,4 +1,3 @@
-#####----- IMPORTS -----#####
 
 from http.client import HTTPException
 from fastapi import APIRouter, status, Response, Depends
@@ -10,8 +9,12 @@ from db.database import get_db
 from typing import List
 from enum import Enum   
 
-#####----- CATALOGS NAMES -----#####
+
 class tipoCatalogo(Enum):
+    """
+        Esta clase contiene definiciones de los tipos de catalogos existentes,
+        esto para validar al momento de recibir un request si el tipo existe
+    """
     AlgoritmoCUDE = 'AlgoritmoCUDE'
     CodigoPrecioReferencia = 'CodigoPrecioReferencia'
     Departamentos = 'Departamentos'
@@ -47,10 +50,8 @@ class tipoCatalogo(Enum):
     TipoMoneda = 'TipoMoneda'
     TipoOperacionSalud = 'TipoOperacionSalud'
     UnidadesMedida = 'UnidadesMedida'
-#####----------------------------------------------------------#####
 
-
-#####----- ROUTE TO GET METHOD -----#####
+# Se añade el roter de la api para todo request que comience con /catalogos
 router = APIRouter(
     prefix='/catalogos',
     tags=['catalogos']

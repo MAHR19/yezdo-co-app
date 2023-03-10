@@ -1,8 +1,9 @@
 from lxml import etree
 import pandas as pd
 import os
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData
 from pdb import set_trace
+
 
 catalogs_description_fix = ['TipoDocumento-2.1.gc']
 #catalogs_invalid_fix = ['TiposEventos.gc']
@@ -25,7 +26,7 @@ def load_files():
     #file_list = get_pathfiles()
     #print(str(len(file_list)) + ' archivos leidos')
     #for file in file_list:
-        file = '/home/mhurtado/catalogos_API/api/v1/catalogos/Listas de valores/codigopostal.xlsx'
+        file = '/home/mhurtado/yezdo-co/catalagos-api/codigopostal.xlsx'
         filename  = os.path.basename(file)
         print('IMPORTANDO\n')
         print(filename + '\n')
@@ -33,7 +34,7 @@ def load_files():
             print('Running')
             print('Opened')
 
-            set_trace()
+            #set_trace()
 
             df = pd.read_excel(
                 file,
@@ -42,7 +43,6 @@ def load_files():
                 skiprows=1,
                 names=['codigo_departamento','nombre_departamento',
                     'codigo_municipio','nombre_municipio','name','tipo'],
-                
             )
             print(df)
 
@@ -52,18 +52,31 @@ def load_files():
             
             
             #set_trace()
-            SQLALCHEMY_DATABASE_URL = 'postgresql://superuser:superuser123@localhost:5432/catalogos'
-            db = create_engine(SQLALCHEMY_DATABASE_URL)
-            db.execute('TRUNCATE TABLE {} RESTART IDENTITY'.format(table_name))
-            
-            print(df)
+            SQLALCHEMY_DATABASE_URL = 'postgresql://yezdo:Mahr1119;.@0.0.0.0:5432/catalogos_db'
+            db = create_engine(SQLALCHEMY_DATABASE_URL, echo=True)
+            #db.execute('TRUNCATE TABLE {} RESTART IDENTITY'.format(table_name))
+            meta = MetaData()
+
+            table = Table(
+                  table_name, meta,
+                  Column('id', Integer, primary_key=True, autoincrement=True),
+                  Column('codigo_departamento', String),
+                  Column('nombre_departamento', String),
+                  Column('codigo_municipio', String),
+                  Column('nombre_municipio', String),
+                  Column('name', String),
+                  Column('tipo', String)
+             )
+
+            meta.create_all(db)
+
             df.to_sql(
-                table_name,
-                con = db,
-                schema='public',
-                if_exists='append',
-                index=False,
-                )
+               table_name,
+               con = db,
+               schema='public',
+               if_exists='append',
+               index=False,
+               )
             
 
         except etree.XMLSyntaxError as e:

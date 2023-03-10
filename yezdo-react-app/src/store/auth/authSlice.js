@@ -18,11 +18,11 @@ export const authSlice = () => createSlice({
         logout : ( state, payload ) => {
 
         },
-        checkCredentials : ( state ) => {
-
+        checkingCredentials : ( state ) => {
+            state.status = 'checking';
         }
     }
 });
 
 
-export const{ login, logout, checkCredentials } = authSlice.actions;
+export const{ login, logout, checkingCredentials } = authSlice.actions;

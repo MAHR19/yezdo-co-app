@@ -1,8 +1,11 @@
-#####----- RESPONSE MODEL -----#####
+
+'''
+    RESPONSE MODELS
+
+'''
 from pydantic import BaseModel
 
- #Allows to return data as we defined above
- 
+
 class ProductoDisplay(BaseModel):
     name:str
     descripcion:str

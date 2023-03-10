@@ -2,7 +2,6 @@ version: '3'
 services:
 
  # React App
- 
   yezdo-co:
     build: 
       context: ./yezdo-react-app
@@ -11,26 +10,56 @@ services:
       - "3000:3000"
     volumes:
       - ./yezdo-react-app:/yezdo-react-app
-  # API de catalagos
-  #postgres:
-  #  image : 'postgres:latest'
-  #catalagos-api:
-  #  build:
-  #    context: ./catalagos-api
-  #    dockerfile: Dockerfile.dev
+  # Base de Datos
+  postgres:
+    image : 'postgres:latest'
+    volumes:
+      - /db-data:/var/lib/postgresql_data
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=yezdo
+      - POSTGRES_PASSWORD=Mahr1119;.
+      - POSTGRES_DB=yezdo_data-db
+  # PG ADMIN 
+  #pgadmin:
+  #  image: dpage/pgadmin4
+  #  environment:
+  #    PGADMIN_DEFAULT_EMAIL: "user@admin.com"
+  #    PGADMIN_DEFAULT_PASSWORD: "admin"
   #  ports:
-  #    - "80:80"
-  #  volumes:
-  #    - ./catalagos-api:/catalagos-api
-  # API que genera XML
-  xml-api:
+  #    - "8001:80"
+  #  depends_on:
+  #    - postgres
+#
+#  user-api:
+#    build:
+#      context: ./user-api
+#      dockerfile: Dockerfile.dev
+#    command: uvicorn main:app --reload --host 0.0.0.0
+#    ports:
+#      - "8001:8001"
+#    volumes:
+#      - ./user-api:/user-api
+# API REST de Catalogos
+  catalagos-api:
     build:
-      context: ./xml-generator-api
+      context: ./catalagos-api
       dockerfile: Dockerfile.dev
     command: uvicorn main:app --reload --host 0.0.0.0
     ports:
       - "8000:8000"
     volumes:
-      - ./xml-generator-api:/xml-api
+      - ./catalagos-api:/catalagos-api
+  # API que genera XML
+  #xml-api:
+  #  build:
+  #    context: ./xml-generator-api
+  #    dockerfile: Dockerfile.dev
+  #  command: uvicorn main:app --reload --host 0.0.0.0
+  #  ports:
+  #    - "8000:8000"
+  #  volumes:
+  #    - ./xml-generator-api:/xml-api
 
   
